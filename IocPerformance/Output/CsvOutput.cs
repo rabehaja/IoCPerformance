@@ -36,7 +36,7 @@ namespace IocPerformance.Output
                         foreach (var benchmark in benchmarks)
                         {
                             var resultsOfBenchmark = benchmarkResults.Where(r => r.BenchmarkInfo.Name == benchmark.Name);
-                            var time = resultsOfBenchmark.First(r => r.ContainerInfo.Name == container.Name).SingleThreadedResult.Time;
+                            var time = resultsOfBenchmark.FirstOrDefault(r => r.ContainerInfo.Name == container.Name)?.SingleThreadedResult.Time;
 
                             writer.Write(
                                 ",{0}",

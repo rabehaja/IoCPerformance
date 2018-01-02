@@ -10,7 +10,7 @@ namespace IocPerformance
     {
         public static void Main(string[] args)
         {
-            var containers = ContainerAdapterFactory.CreateAdapters().ToArray();
+            var containers = ContainerAdapterFactory.ManuallyCreateAdapters().ToArray();
             var benchmarks = BenchmarkFactory.CreateBenchmarks().ToArray();
 
             var benchmarkResults = new List<BenchmarkResult>();

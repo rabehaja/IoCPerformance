@@ -17,12 +17,13 @@ namespace IocPerformance.Output
                     writer.WriteLine("Ioc Performance");
                     writer.WriteLine("===============");
                     writer.WriteLine(string.Empty);
-                    writer.WriteLine("Source code of my performance comparison of the most popular .NET IoC containers:  ");
+                    writer.WriteLine("Source code of Daniel Palme's performance comparison of the most popular .NET IoC containers:");
                     writer.WriteLine("[www.palmmedia.de/Blog/2011/8/30/ioc-container-benchmark-performance-comparison](http://www.palmmedia.de/Blog/2011/8/30/ioc-container-benchmark-performance-comparison)");
                     writer.WriteLine(string.Empty);
-                    writer.WriteLine("Author: Daniel Palme  ");
-                    writer.WriteLine("Blog: [www.palmmedia.de](http://www.palmmedia.de)  ");
-                    writer.WriteLine("Twitter: [@danielpalme](http://twitter.com/danielpalme)  ");
+                    writer.WriteLine("**List of changes:**"); 
+                    writer.WriteLine("-Added method to create containers instead of reading in the assembly");
+                    writer.WriteLine("-Added null check in some output classes");
+                    writer.WriteLine("- Changed Markdown output to generate this instead of the default one");
                     writer.WriteLine(string.Empty);
                     writer.WriteLine("Results");
                     writer.WriteLine("-------");

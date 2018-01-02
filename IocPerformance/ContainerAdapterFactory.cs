@@ -35,5 +35,21 @@ namespace IocPerformance
                 yield return container;
             }
         }
+
+        /// <summary>
+        /// Use this method when you want to test specific IoC containers.
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<IContainerAdapter> ManuallyCreateAdapters()
+        {
+            return new List<IContainerAdapter>
+            {
+                new NoContainerAdapter(),
+                new SimpleInjectorContainerAdapter(),
+                new MicrosoftExtensionsDependencyInjectionContainerAdapter(),
+                new NinjectContainerAdapter(),
+                new UnityContainerAdapter()
+            };
+        }
     }
 }
